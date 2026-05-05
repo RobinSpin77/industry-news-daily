@@ -37,6 +37,14 @@ cp .claude/skills/industry-news-daily/config.example.json .claude/skills/industr
 
 编辑 `config.json`，填入你自己的行业配置。详细字段说明见下方「配置说明」。
 
+**不想手动找信源？** 直接对 Claude 说：
+
+```
+帮我找出动力电池领域最权威的 20 个媒体和消息来源
+```
+
+Claude 会自动搜索、排名、展示候选列表，你勾选后直接写入 config.json。
+
 ### 3. 开始使用
 
 在 Claude Code 对话中说：
