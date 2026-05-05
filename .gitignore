@@ -1,0 +1,8 @@
+# 用户自己的配置（含飞书 webhook 等敏感信息）
+config.json
+
+# 生成的内容（每个用户自己运行后产生）
+daily-reports/
+
+# 临时文件
+tmp_*.json
