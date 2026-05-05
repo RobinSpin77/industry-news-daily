@@ -1,6 +1,4 @@
 {
-  "_说明": "复制此文件为 config.json，填入你自己行业的配置。config.json 不会被 git 追踪。",
-
   "categories": [
     {
       "id": "battery-power",
@@ -8,7 +6,18 @@
       "search_keywords_cn": ["动力电池", "固态电池", "锂电池", "钠离子电池", "磷酸铁锂", "三元锂"],
       "search_keywords_en": ["solid state battery", "lithium battery", "EV battery", "sodium ion battery", "LFP battery"],
       "company_keywords": ["宁德时代 CATL", "比亚迪 BYD", "LG Energy Solution", "松下 Panasonic", "三星 SDI", "QuantumScape", "Solid Power"],
-      "site_keywords": ["电池中国", "高工锂电", "真锂研究"]
+      "sources": {
+        "priority": [
+          {"name": "高工锂电", "url": "https://www.gg-lb.com"},
+          {"name": "电池中国", "url": "https://www.cbea.com"},
+          {"name": "真锂研究", "url": "https://www.realli.net"}
+        ],
+        "normal": [
+          {"name": "起点锂电", "url": "https://www.qd-lib.com"},
+          {"name": "鑫椤资讯", "url": "https://www.iccsino.com"},
+          {"name": "电池网", "url": "https://www.itdcw.com"}
+        ]
+      }
     },
     {
       "id": "ev-market",
@@ -16,20 +25,26 @@
       "search_keywords_cn": ["新能源汽车", "电动汽车", "电动车", "新能源车", "智能驾驶"],
       "search_keywords_en": ["electric vehicle", "EV market", "NEV", "smart driving", "autonomous driving"],
       "company_keywords": ["比亚迪", "特斯拉 Tesla", "蔚来 NIO", "小鹏 XPeng", "理想 Li Auto", "小米汽车"],
-      "site_keywords": ["汽车之家", "盖世汽车", "电动邦"]
+      "sources": {
+        "priority": [
+          {"name": "盖世汽车", "url": "https://auto.gasgoo.com"},
+          {"name": "汽车之家", "url": "https://www.autohome.com.cn"},
+          {"name": "电动邦", "url": "https://www.diandong.com"}
+        ],
+        "normal": [
+          {"name": "第一电动", "url": "https://www.d1ev.com"},
+          {"name": "车云网", "url": "https://www.cheyun.com"}
+        ]
+      }
     }
   ],
 
-  "sources": {
-    "_说明": "priority 列表里的站点每次优先抓取；normal 列表按需搜索。",
+  "shared_sources": {
     "priority": [
-      {"name": "高工锂电", "url": "https://www.gg-lb.com"},
-      {"name": "电池中国", "url": "https://www.cbea.com"},
-      {"name": "盖世汽车", "url": "https://auto.gasgoo.com"}
+      {"name": "36氪", "url": "https://36kr.com"},
+      {"name": "投资界", "url": "https://www.pedaily.cn"}
     ],
     "normal": [
-      {"name": "36氪", "url": "https://36kr.com"},
-      {"name": "投资界", "url": "https://www.pedaily.cn"},
       {"name": "电子工程专辑", "url": "https://www.eet-china.com"},
       {"name": "IEEE Spectrum", "url": "https://spectrum.ieee.org"},
       {"name": "Nikkei Asia", "url": "https://asia.nikkei.com"},

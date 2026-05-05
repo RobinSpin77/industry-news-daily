@@ -68,14 +68,18 @@ cp .claude/skills/industry-news-daily/config.example.json .claude/skills/industr
 | `company_keywords` | 核心公司名（会去官网抓新闻） | `["宁德时代 CATL"]` |
 | `site_keywords` | 行业站点关键词（辅助搜索） | `["高工锂电"]` |
 
-### sources（可选）
+### sources（每个 category 内，推荐填写）
 
-你的行业媒体列表，分两个优先级：
+每个板块可以有自己的信源列表，放在 `category.sources` 下：
 
-- **priority**：每次运行优先抓取
-- **normal**：按需搜索
+- **priority**：该板块核心媒体，每次运行优先抓取首页/新闻列表
+- **normal**：该板块补充媒体，按需搜索
 
-每项包含 `name` 和 `url`。
+### shared_sources（可选）
+
+所有板块共享的通用行业媒体（如 36氪、投资界、IEEE Spectrum）。搜索每个板块时，会自动合并「板块专属信源 + 共享信源」。
+
+**怎么填？** 把你平时每天刷的行业网站放进 `priority`，偶尔看的放进 `normal`。每项填网站名和 URL 即可。
 
 ### feishu_webhook（必需）
 
